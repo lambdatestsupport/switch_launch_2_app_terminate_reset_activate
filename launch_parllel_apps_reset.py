@@ -16,8 +16,8 @@ desired_caps_1 = {
 }
 desired_caps_2 = {
     "platformName": "Android",
-    "deviceName": "Galaxy S20 Ultra",
-    "platformVersion": "10",
+    "deviceName": "Pixel 3",
+    "platformVersion": "9",
     "app": "lt://APP1016045801684934067697603",
     "build": "Rishabh_Appium",
     "name": "App2",
@@ -28,15 +28,15 @@ desired_caps_2 = {
     "visual":True
 }
 # Initialize the Appium driver for the first app
-driver_1= webdriver.Remote(desired_capabilities=desired_caps_1, command_executor="https://" +
-                                  "rishabhsinghlambdatest"+":"+"7f4Xoi2I7A1H7f4Y84emKmZKhE0Cn440Obyy1WGIcud425cWei"+"@mobile-hub.lambdatest.com/wd/hub")
+driver_1= webdriver.Remote(desired_capabilities=desired_caps_2, command_executor="https://" +
+                                  username+":"+access_key+"@mobile-hub.lambdatest.com/wd/hub")
 # Launch the first app
 driver_1.launch_app()
 # Perform actions on the first app
 driver_1.close_app()
 # Initialize the Appium driver for the second app
 driver_2= webdriver.Remote(desired_capabilities=desired_caps_2, command_executor="https://" +
-                                  "rishabhsinghlambdatest"+":"+"7f4Xoi2I7A1H7f4Y84emKmZKhE0Cn440Obyy1WGIcud425cWei"+"@mobile-hub.lambdatest.com/wd/hub")
+                                  username+":"+access_key+"@mobile-hub.lambdatest.com/wd/hub")
 # Launch the second app
 driver_2.launch_app()
 driver_1.reset()
